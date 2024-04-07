@@ -129,13 +129,13 @@ Retain any comment lines present in the MySQL query.
 promptforai = ""
 
 if selected_option_number == 1:    
-   prompt_input = st.text_area(f'Paste your MySQL SP here (Selected option: {option}):', height=200)
+   prompt_input = st.text_area(f'Paste your MySQL SP here (Selected option: {option}):', height=200,label_visibility='collapse')
    promptforai = wholespprompt
 elif selected_option_number == 2:    
-   prompt_input = st.text_area(f'Paste your MySQL Query here (Selected option: {option}):', height=200)    
+   prompt_input = st.text_area(f'Paste your MySQL Query here (Selected option: {option}):', height=200,label_visibility='collapse')    
    promptforai = optimizerquery    
 elif selected_option_number == 3:
-   prompt_input = st.text_area(f'Paste your MySQL Query here (Selected option: {option}):', height=200)
+   prompt_input = st.text_area(f'Paste your MySQL Query here (Selected option: {option}):', height=200,label_visibility='collapse')
    promptforai = singlequery
 
 
