@@ -36,6 +36,8 @@ def is_mysql_query(input_str):
     for pattern in query_patterns:
         if re.search(pattern, input_str, re.IGNORECASE):
             return True
+    if 'DELIMITER' in input_str and 'BEGIN' in input_str:
+        return True    
     return False
 
 
@@ -145,7 +147,7 @@ if st.button('Convert'):
        client = initialize_openai_client(api_key)
        print(api_key)  
        with st.spinner('Converting...'):
-            if is_mysql_query(promptforai):
+            if is_mysql_query(promptforai+"\n"+prompt_input):
                output = call_api(promptforai+"\n"+prompt_input,systemprompt)      
                #output_text.text(output)
                st.text_area('Successfully Converted as PostgreSQL : Response:', value=output, height=400)
