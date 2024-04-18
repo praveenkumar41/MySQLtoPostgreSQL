@@ -48,7 +48,7 @@ def call_api(prompt_text,systemprompt):
         encoding = tiktoken.get_encoding("cl100k_base")
         tokencount = count_tokens(encoding,prompt_text)
         print(tokencount)
-        if tokencount <= 3500:
+        if tokencount <= 4000:
             ModelName = "mysql-to-postgresql-gpt35"
         if tokencount > 4000:
             ModelName = "mysql-to-postgresql-gpt-35-turbo-16k"      
