@@ -74,7 +74,7 @@ st.title('MySQL To PostgreSQL')
 with st.sidebar:
     st.write("Select an option:")
     option = st.selectbox("", ["Stored Procedure", "Optimizer", "Single Query"], index=0)
-    api_key = st.text_input("Enter your API key:",label_visibility='collapse')
+    api_key = st.text_input("Enter your API key:",label_visibility='collapsed')
     
 
 selected_option_number = option_dict(option)
@@ -129,13 +129,13 @@ Retain any comment lines present in the MySQL query.
 promptforai = ""
 
 if selected_option_number == 1:    
-   prompt_input = st.text_area(f'Paste your MySQL SP here (Selected option: {option}):', height=200,label_visibility='collapse')
+   prompt_input = st.text_area(f'Paste your MySQL SP here (Selected option: {option}):', height=200,label_visibility='collapsed')
    promptforai = wholespprompt
 elif selected_option_number == 2:    
-   prompt_input = st.text_area(f'Paste your MySQL Query here (Selected option: {option}):', height=200,label_visibility='collapse')    
+   prompt_input = st.text_area(f'Paste your MySQL Query here (Selected option: {option}):', height=200,label_visibility='collapsed')    
    promptforai = optimizerquery    
 elif selected_option_number == 3:
-   prompt_input = st.text_area(f'Paste your MySQL Query here (Selected option: {option}):', height=200,label_visibility='collapse')
+   prompt_input = st.text_area(f'Paste your MySQL Query here (Selected option: {option}):', height=200,label_visibility='collapsed')
    promptforai = singlequery
 
 
