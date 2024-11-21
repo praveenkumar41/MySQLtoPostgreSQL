@@ -74,7 +74,7 @@ st.title('MySQL To PostgreSQL')
 with st.sidebar:
     st.write("Select an option:")
     option = st.selectbox("", ["Stored Procedure", "Optimizer", "Single Query"], index=0)
-    api_key = st.text_input("Enter your API key:",label_visibility='collapsed')
+    api_key = st.text_input("Enter your API key:",placeholder="Enter your API key",label_visibility='collapsed')
     
 
 selected_option_number = option_dict(option)
