@@ -113,7 +113,7 @@ def call_api(client, prompt_text, wholespprompt, systemprompt):
             model=ModelName,
             messages=[{"role": "system", "content": systemprompt},
                       {"role": "user", "content": full_prompt}],
-            max_tokens=4096,          
+            max_tokens=12000,          
             temperature=0,          
         )
         return response.choices[0].message.content
